@@ -1,0 +1,44 @@
+/* Freela no Bolso — tokens extraídos dos estilos do Figma */
+:root {
+  --font-sans: "Inter", system-ui, sans-serif;
+
+  --branco: #ffffff; --preto: #000000;
+  --bronze: #b2470a; --bronze-escuro: #602402;
+  --canvas: #f5f5f5;
+
+  --primaria-25:#f5f8ff; --primaria-50:#eef4ff; --primaria-100:#e0eaff; --primaria-200:#c7d7fe; --primaria-300:#a4bcfd;
+  --primaria-400:#8098f9; --primaria-500:#6172f3; --primaria-600:#444ce7; --primaria-700:#3538cd; --primaria-800:#2d31a6; --primaria-900:#2d3282;
+
+  --neutro-25:#fcfcfd; --neutro-50:#f9fafb; --neutro-100:#f2f4f7; --neutro-200:#eaecf0; --neutro-300:#d0d5dd;
+  --neutro-400:#98a2b3; --neutro-500:#667085; --neutro-600:#475467; --neutro-700:#344054; --neutro-800:#1d2939; --neutro-900:#101828;
+
+  --sucesso-25:#f6fef9; --sucesso-50:#ecfdf3; --sucesso-100:#d1fadf; --sucesso-200:#a6f4c5; --sucesso-300:#6ce9a6;
+  --sucesso-400:#32d583; --sucesso-500:#12b76a; --sucesso-600:#039855; --sucesso-700:#027a48; --sucesso-800:#05603a; --sucesso-900:#054f31;
+
+  --erro-25:#fffbfa; --erro-50:#fef3f2; --erro-100:#fee4e2; --erro-200:#fecdca; --erro-300:#fda29b;
+  --erro-400:#f97066; --erro-500:#f04438; --erro-600:#d92d20; --erro-700:#b42318; --erro-800:#912018; --erro-900:#7a271a;
+
+  --alerta-25:#fffcf5; --alerta-50:#fffaeb; --alerta-100:#fef0c7; --alerta-200:#fedf89; --alerta-300:#fec84b;
+  --alerta-400:#fdb022; --alerta-500:#f79009; --alerta-600:#dc6803; --alerta-700:#b54708; --alerta-800:#93370d; --alerta-900:#7a2e0e;
+
+  --rosa-50:#fdf2fa; --rosa-500:#ee46bc; --rosa-600:#dd2590; --rosa-700:#c11574;
+}
+
+.h1{font:600 30px/1.5 var(--font-sans);color:var(--neutro-900)}
+.h2{font:600 24px/1.5 var(--font-sans);color:var(--neutro-900)}
+.h3{font:600 18px/1.5 var(--font-sans);color:var(--neutro-900)}
+.h4{font:600 16px/1.5 var(--font-sans);color:var(--neutro-700)}
+.h4-destaque{font:600 16px/1.5 var(--font-sans);color:var(--primaria-600)}
+.h5{font:600 14px/1.5 var(--font-sans);color:var(--neutro-900)}
+.h5-destaque{font:600 14px/1.5 var(--font-sans);color:var(--primaria-600)}
+.h6{font:600 12px/1.5 var(--font-sans);color:var(--neutro-600)}
+.texto-grande{font:400 16px/1.5 var(--font-sans);color:var(--neutro-600)}
+.texto{font:400 14px/1.5 var(--font-sans);color:var(--neutro-600)}
+.texto-destaque{font:500 14px/1.5 var(--font-sans);color:var(--primaria-600)}
+.texto-sucesso{font:500 14px/1.5 var(--font-sans);color:var(--sucesso-600)}
+.texto-erro{font:500 14px/1.5 var(--font-sans);color:var(--erro-600)}
+.texto-alerta{font:500 14px/1.5 var(--font-sans);color:var(--alerta-600)}
+.texto-rosa{font:500 14px/1.5 var(--font-sans);color:var(--rosa-600)}
+.texto-pequeno{font:400 12px/1.5 var(--font-sans);color:var(--neutro-600)}
+.texto-pequeno-destaque{font:500 12px/1.5 var(--font-sans);color:var(--primaria-600)}
+.citacao{font:italic 400 16px/1.5 var(--font-sans);color:var(--neutro-600)}
