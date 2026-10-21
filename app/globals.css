@@ -1,0 +1,133 @@
+@import "tailwindcss";
+@import "@fontsource-variable/inter";
+@import "../design/tokens.css" layer(components);
+
+/* Variáveis semânticas no padrão shadcn/ui, apontando para os tokens do Figma.
+   Assim os componentes adicionados com `shadcn add` já saem com a nossa cara. */
+:root {
+  --radius: 0.5rem;
+  --background: var(--branco);
+  --foreground: var(--neutro-900);
+  --card: var(--branco);
+  --card-foreground: var(--neutro-900);
+  --popover: var(--branco);
+  --popover-foreground: var(--neutro-900);
+  --primary: var(--primaria-600);
+  --primary-foreground: var(--branco);
+  --secondary: var(--branco);
+  --secondary-foreground: var(--neutro-700);
+  --muted: var(--neutro-50);
+  --muted-foreground: var(--neutro-600);
+  --accent: var(--neutro-50);
+  --accent-foreground: var(--neutro-900);
+  --destructive: var(--erro-600);
+  --border: var(--neutro-200);
+  --input: var(--neutro-300);
+  --ring: var(--primaria-300);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --radius-sm: calc(var(--radius) - 2px);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 4px);
+  --radius-xl: calc(var(--radius) + 8px);
+
+  /* Tokens do design system (docs/05-design-system.md) */
+  --color-branco: var(--branco);
+  --color-canvas: var(--canvas);
+  --color-bronze: var(--bronze);
+  --color-bronze-escuro: var(--bronze-escuro);
+
+  --color-primaria-25: var(--primaria-25);
+  --color-primaria-50: var(--primaria-50);
+  --color-primaria-100: var(--primaria-100);
+  --color-primaria-200: var(--primaria-200);
+  --color-primaria-300: var(--primaria-300);
+  --color-primaria-400: var(--primaria-400);
+  --color-primaria-500: var(--primaria-500);
+  --color-primaria-600: var(--primaria-600);
+  --color-primaria-700: var(--primaria-700);
+  --color-primaria-800: var(--primaria-800);
+  --color-primaria-900: var(--primaria-900);
+
+  --color-neutro-25: var(--neutro-25);
+  --color-neutro-50: var(--neutro-50);
+  --color-neutro-100: var(--neutro-100);
+  --color-neutro-200: var(--neutro-200);
+  --color-neutro-300: var(--neutro-300);
+  --color-neutro-400: var(--neutro-400);
+  --color-neutro-500: var(--neutro-500);
+  --color-neutro-600: var(--neutro-600);
+  --color-neutro-700: var(--neutro-700);
+  --color-neutro-800: var(--neutro-800);
+  --color-neutro-900: var(--neutro-900);
+
+  --color-sucesso-25: var(--sucesso-25);
+  --color-sucesso-50: var(--sucesso-50);
+  --color-sucesso-100: var(--sucesso-100);
+  --color-sucesso-200: var(--sucesso-200);
+  --color-sucesso-300: var(--sucesso-300);
+  --color-sucesso-400: var(--sucesso-400);
+  --color-sucesso-500: var(--sucesso-500);
+  --color-sucesso-600: var(--sucesso-600);
+  --color-sucesso-700: var(--sucesso-700);
+  --color-sucesso-800: var(--sucesso-800);
+  --color-sucesso-900: var(--sucesso-900);
+
+  --color-erro-25: var(--erro-25);
+  --color-erro-50: var(--erro-50);
+  --color-erro-100: var(--erro-100);
+  --color-erro-200: var(--erro-200);
+  --color-erro-300: var(--erro-300);
+  --color-erro-400: var(--erro-400);
+  --color-erro-500: var(--erro-500);
+  --color-erro-600: var(--erro-600);
+  --color-erro-700: var(--erro-700);
+  --color-erro-800: var(--erro-800);
+  --color-erro-900: var(--erro-900);
+
+  --color-alerta-25: var(--alerta-25);
+  --color-alerta-50: var(--alerta-50);
+  --color-alerta-100: var(--alerta-100);
+  --color-alerta-200: var(--alerta-200);
+  --color-alerta-300: var(--alerta-300);
+  --color-alerta-400: var(--alerta-400);
+  --color-alerta-500: var(--alerta-500);
+  --color-alerta-600: var(--alerta-600);
+  --color-alerta-700: var(--alerta-700);
+  --color-alerta-800: var(--alerta-800);
+  --color-alerta-900: var(--alerta-900);
+
+  --color-rosa-50: var(--rosa-50);
+  --color-rosa-500: var(--rosa-500);
+  --color-rosa-600: var(--rosa-600);
+  --color-rosa-700: var(--rosa-700);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+}

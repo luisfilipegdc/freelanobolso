@@ -1,6 +1,6 @@
 /* Freela no Bolso — tokens extraídos dos estilos do Figma */
 :root {
-  --font-sans: "Inter", system-ui, sans-serif;
+  --font-sans: "Inter Variable", "Inter", system-ui, sans-serif;
 
   --branco: #ffffff; --preto: #000000;
   --bronze: #b2470a; --bronze-escuro: #602402;
