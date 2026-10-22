@@ -37,6 +37,9 @@ Fonte da verdade do design: Figma "Freelup (cópia)" (nome original do arquivo; 
 - `app/(app)` — área logada (sidebar + card da conta); `app/auth/callback` — retorno do Supabase Auth
 - `lib/supabase/` — clientes browser/server e renovação de sessão usada pelo `proxy.ts` (que também protege as rotas)
 - `lib/auth.ts` (`getPerfil`), `lib/gamificacao.ts` (níveis/ligas), `lib/opcoes.ts` (listas de seleção)
+- `lib/acoes.ts` — `exigirUsuario()` e o tipo `ActionState` das Server Actions; `hooks/use-action-form.ts` envia o form sem apagar os campos em caso de erro
+- `lib/mascaras.ts` — máscaras/validação de CPF, CNPJ, CEP, telefone e R$; `components/freelanobolso/masked-input.tsx` (`MaskedInput`, `MoneyInput`)
+- **Pontos são dados pelo banco**: triggers em `0003_pessoas_servicos.sql` (`award_points`) gravam/apagam `point_events` ao criar/excluir. O app só mostra o toast com `useToast().pontos(n)`. Para uma nova ação pontuada, crie o trigger na migration.
 
 ## Comandos
 ```bash
@@ -50,4 +53,5 @@ pnpm lint && pnpm build  # checagens antes de commitar
 
 ## Progresso do roadmap
 - [x] Fase 1 — Fundação
-- [ ] Fase 2 — Pessoas + Serviços (as demais páginas do menu mostram "Em construção")
+- [x] Fase 2 — Pessoas + Serviços
+- [ ] Fase 3 — Propostas (as demais páginas do menu mostram "Em construção")

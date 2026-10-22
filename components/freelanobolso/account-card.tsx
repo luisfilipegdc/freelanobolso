@@ -4,7 +4,12 @@ import { PersonAvatar } from "./person-avatar";
 import { sair } from "@/app/(auth)/actions";
 
 /** Card da conta no rodapé do menu: "Tiago Costa · Bronze - Nível 7" + barra de pontos. */
-export function AccountCard({ name, email, avatarUrl, points }: {
+export function AccountCard({
+  name,
+  email,
+  avatarUrl,
+  points,
+}: {
   name: string;
   email: string;
   avatarUrl: string | null;

@@ -12,6 +12,10 @@ const nextConfig: NextConfig = {
       process.env.SUPABASE_ANON_KEY ??
       "",
   },
+  experimental: {
+    // Fotos de até 2 MB (pessoas, logo) + folga do multipart.
+    serverActions: { bodySizeLimit: "3mb" },
+  },
   turbopack: {
     rules: {
       "*.css": {

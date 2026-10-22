@@ -1,7 +1,9 @@
 /** Saudação da tela Início conforme o horário de Brasília. */
 export function saudacao(agora = new Date()) {
   const hora = Number(
-    new Intl.DateTimeFormat("pt-BR", { hour: "numeric", hourCycle: "h23", timeZone: "America/Sao_Paulo" }).format(agora),
+    new Intl.DateTimeFormat("pt-BR", { hour: "numeric", hourCycle: "h23", timeZone: "America/Sao_Paulo" }).format(
+      agora,
+    ),
   );
   if (hora >= 5 && hora < 12) return "Bom dia";
   if (hora >= 12 && hora < 18) return "Boa tarde";
