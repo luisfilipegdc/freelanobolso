@@ -1,7 +1,6 @@
 export const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
-// A integração Supabase da Vercel cria NEXT_PUBLIC_SUPABASE_ANON_KEY; aceitamos as duas.
-export const supabaseKey = (process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY ??
-  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY)!;
+// next.config.ts resolve os nomes alternativos (ANON_KEY, sem NEXT_PUBLIC_) para este.
+export const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY!;
 
 /** Nomes das variáveis que faltam para conectar ao Supabase (vazio = tudo certo). */
 export function variaveisFaltando() {
