@@ -11,6 +11,10 @@ export type ActionState = {
   pontos?: number;
   /** Incrementa a cada sucesso, para o cliente reagir mesmo a dois sucessos seguidos. */
   vez?: number;
+  /** Id do registro criado (para navegar até ele). */
+  id?: string;
+  /** Slug do link público gerado. */
+  slug?: string;
 };
 
 /** Cliente do Supabase + id do usuário. Toda Server Action reautentica aqui. */

@@ -16,7 +16,7 @@ export const TIPO_PROJETO: Record<string, string> = {
 
 export const STATUS_PROPOSTA: Record<string, { label: string; cor: Cor }> = {
   rascunho: { label: "Rascunho", cor: "neutro" },
-  enviada: { label: "Aguardando Resposta", cor: "alerta" },
+  enviada: { label: "Enviada", cor: "alerta" },
   visualizada: { label: "Visualizada", cor: "primaria" },
   aceita: { label: "Aceita", cor: "sucesso" },
   rejeitada: { label: "Rejeitada", cor: "erro" },

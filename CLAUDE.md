@@ -39,6 +39,8 @@ Fonte da verdade do design: Figma "Freelup (cópia)" (nome original do arquivo; 
 - `lib/auth.ts` (`getPerfil`), `lib/gamificacao.ts` (níveis/ligas), `lib/opcoes.ts` (listas de seleção)
 - `lib/acoes.ts` — `exigirUsuario()` e o tipo `ActionState` das Server Actions; `hooks/use-action-form.ts` envia o form sem apagar os campos em caso de erro
 - `lib/mascaras.ts` — máscaras/validação de CPF, CNPJ, CEP, telefone e R$; `components/freelanobolso/masked-input.tsx` (`MaskedInput`, `MoneyInput`)
+- Propostas: wizard em `app/(app)/propostas/[id]/editar/[passo]` (o rascunho é criado antes); `components/freelanobolso/proposta-documento.tsx` desenha a proposta (revisão, detalhes e link público); `lib/propostas.ts` tem totais, status e slug.
+- **Links públicos** (`app/proposta/[slug]`) não leem tabelas: usam funções `security definer` do banco (`proposta_publica`, `registrar_visualizacao_proposta`, `responder_proposta` em `0004_propostas.sql`). Siga o mesmo padrão para contrato e Área do Cliente.
 - **Pontos são dados pelo banco**: triggers em `0003_pessoas_servicos.sql` (`award_points`) gravam/apagam `point_events` ao criar/excluir. O app só mostra o toast com `useToast().pontos(n)`. Para uma nova ação pontuada, crie o trigger na migration.
 
 ## Comandos
@@ -54,4 +56,5 @@ pnpm lint && pnpm build  # checagens antes de commitar
 ## Progresso do roadmap
 - [x] Fase 1 — Fundação
 - [x] Fase 2 — Pessoas + Serviços
-- [ ] Fase 3 — Propostas (as demais páginas do menu mostram "Em construção")
+- [x] Fase 3 — Propostas
+- [ ] Fase 4 — Contratos (as demais páginas do menu mostram "Em construção")

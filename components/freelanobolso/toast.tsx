@@ -1,9 +1,9 @@
 "use client";
 
 import * as React from "react";
-import { CheckCircle2, Trophy, X } from "lucide-react";
+import { AlertCircle, CheckCircle2, Trophy, X } from "lucide-react";
 
-type Toast = { id: number; message: string; kind: "pontos" | "sucesso" };
+type Toast = { id: number; message: string; kind: "pontos" | "sucesso" | "erro" };
 
 const ToastContext = React.createContext<(message: string, kind?: Toast["kind"]) => void>(() => {});
 
@@ -36,11 +36,9 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {
             role="status"
             className="pointer-events-auto flex w-full max-w-sm items-center gap-3 rounded-lg border border-neutro-200 bg-branco p-4 shadow-lg"
           >
-            {t.kind === "pontos" ? (
-              <Trophy className="size-5 shrink-0 text-bronze" />
-            ) : (
-              <CheckCircle2 className="size-5 shrink-0 text-sucesso-600" />
-            )}
+            {t.kind === "pontos" && <Trophy className="size-5 shrink-0 text-bronze" />}
+            {t.kind === "sucesso" && <CheckCircle2 className="size-5 shrink-0 text-sucesso-600" />}
+            {t.kind === "erro" && <AlertCircle className="size-5 shrink-0 text-erro-600" />}
             <p className="h5 flex-1">{t.message}</p>
             <button
               type="button"
@@ -61,6 +59,7 @@ export function useToast() {
   const show = React.use(ToastContext);
   return {
     sucesso: (message: string) => show(message, "sucesso"),
+    erro: (message: string) => show(message, "erro"),
     pontos: (pontos: number) => show(`Parabéns, você ganhou ${pontos} ${pontos === 1 ? "ponto" : "pontos"}!`, "pontos"),
   };
 }
